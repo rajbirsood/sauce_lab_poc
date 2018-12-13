@@ -4,7 +4,7 @@ FROM ubuntu:16.04
 RUN ["apt-get", "update"]
 RUN ["apt-get", "install", "-y", "vim"]
 RUN ["apt-get", "update"]
-RUN ["apt-get", "install", "-y", "telnet"]
+RUN ["apt-get", "install", "-y", "net-tools"]
 #Get Sauce Labs test automation dependencies
 RUN ["apt-get", "update"]
 RUN ["apt-get", "install", "-y", "curl"]
