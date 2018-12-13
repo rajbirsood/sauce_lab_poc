@@ -3,6 +3,8 @@ FROM ubuntu:16.04
 #Get vim, allowing for file edits in the running image
 RUN ["apt-get", "update"]
 RUN ["apt-get", "install", "-y", "vim"]
+RUN ["apt-get", "update"]
+RUN ["apt-get", "install", "-y", "telnet"]
 #Get Sauce Labs test automation dependencies
 RUN ["apt-get", "update"]
 RUN ["apt-get", "install", "-y", "curl"]
@@ -20,7 +22,7 @@ RUN ["apt-get", "install", "-y", "ca-certificates"]
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 #Expose required SauceClient connect ports
-EXPOSE 8000 8001
+EXPOSE 8000 8001 443
 #SauceClient prerequisites...
 #Push and extract latest Sauce connect client from local system to docker image
 #Modify sc@service with valid SauceLabs account credentials prior to pushing
