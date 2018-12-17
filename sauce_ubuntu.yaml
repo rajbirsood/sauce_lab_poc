@@ -8,7 +8,7 @@ metadata:
 spec:
   containers:
   - name: rajbsoodsauce-ubuntu-1604-5
-    image: debian
+    image: registry.eu-gb.bluemix.net/cloudservices-shared/rajbsoodsauce-ubuntu-1604-5
     ports:
       - containerPort: 8000
     command: ["/bin/bash"]
