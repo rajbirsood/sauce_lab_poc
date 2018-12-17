@@ -3,8 +3,6 @@ kind: Pod
 metadata:
   name: rajbir-sauce-ubuntu-1604-5
   namespace: default
-  labels:
-    purpose: open sauce connect tunnel
 spec:
   containers:
   - name: rajbsoodsauce-ubuntu-1604-5
