@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+name: rajbir-sauce-ubuntu-1604-5
+namespace: default
+spec:
+containers:
+- name: rajbsoodsauce-ubuntu-1604-5
+image: registry.eu-gb.bluemix.net/cloudservices-shared/rajbsoodsauce-ubuntu-1604-5
+ports:
+- containerPort: 8000
+command: ["/bin/bash"]
+args: ["-c", "while true; do echo hello; sleep 20; done"]
+restartPolicy: OnFailure
