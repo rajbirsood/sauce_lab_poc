@@ -10,7 +10,7 @@ spec:
   - name: rajbsoodsauce-ubuntu-1604-5
     image: debian
     ports:
-   - containerPort: 8000
+      - containerPort: 8000
     command: ["/bin/bash"]
     args: ["-c", "while true; do echo hello; sleep 20; done"]
   restartPolicy: OnFailure
